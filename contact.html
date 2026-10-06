@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/Screenshot 2026-09-25 092349.png" type="image/x-icon">
+
+<title>Contact — Campus Clinic</title>
+<meta name="description" content="Clinic location, hours, emergency numbers and how to reach the campus clinic.">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">+</span>
+      <span class="brand-text">
+        <strong>Campus Clinic</strong>
+        <span>Telemedicine Portal</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Patient login</a></li>
+        <li><a href="appointments.html">Book Appointment</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="health-resources.html">Lab Tests</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Contact us &amp; emergency info</h1>
+      <p class="lede">Save these numbers. For anything urgent, call rather than book online.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="notice">
+        <p><strong>In an emergency:</strong> call campus security on <strong>0800-CLINIC</strong> or go directly to the clinic's ground floor emergency bay, open 24/7. If you're off campus and it's serious, call your local emergency number first.</p>
+      </div>
+
+      <div class="two-col">
+        <div class="contact-info" id="contact-details">
+          <h2>Clinic details</h2>
+          <dl>
+            <dt>Location</dt>
+            <dd>Campus Clinic Building, opposite the Faculty of Sciences, Main Campus</dd>
+            <dt>General hours</dt>
+            <dd>Monday to Friday, 8am – 6pm. Saturday, 9am – 1pm.</dd>
+            <dt>Emergency bay</dt>
+            <dd>Open 24 hours, every day, including holidays</dd>
+            <dt>Nurse triage line (24/7)</dt>
+            <dd>0800-CLINIC</dd>
+            <dt>General enquiries</dt>
+            <dd><a href="mailto:clinic@campus.example.edu">clinic@campus.example.edu</a></dd>
+            <dt>Appointments desk</dt>
+            <dd><a href="mailto:appointments@campus.example.edu">appointments@campus.example.edu</a></dd>
+            <dt>Mental health &amp; counselling</dt>
+            <dd><a href="mailto:counselling@campus.example.edu">counselling@campus.example.edu</a></dd>
+          </dl>
+        </div>
+
+        <form class="panel">
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="student-id">Matriculation number</label>
+            <input type="text" id="student-id" name="student-id" placeholder="e.g. SU/2023/00123">
+          </div>
+          <div class="form-row">
+            <label for="topic">What's this about?</label>
+            <select id="topic" name="topic">
+              <option>General enquiry</option>
+              <option>Appointment question</option>
+              <option>Prescription or pharmacy</option>
+              <option>Feedback or complaint</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="How can we help?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+      </div>
+      <div class="faq-item">
+        <h3>Is the clinic free for students?</h3>
+        <p>Consultations are covered by the student health fee included in registration. Lab tests, some vaccines and pharmacy items may carry a small additional cost, shown before you confirm.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is my information confidential?</h3>
+        <p>Yes. Your health record is only accessible to clinic staff directly involved in your care, and is never shared with faculty or administration without your written consent, except where required by law.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I be seen without an appointment?</h3>
+        <p>Walk-ins are accepted for urgent same day concerns, but booking ahead  virtual or in person means a shorter wait.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you see students living off campus?</h3>
+        <p>Yes, all currently enrolled students can use the clinic, regardless of where they live. Virtual consults are available to anyone with an internet connection.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What do I do if I'm having a mental health crisis?</h3>
+        <p>Call the 24/7 nurse triage line immediately, or go to the clinic's emergency bay  do not wait for a scheduled appointment. See <a href="#contact-details">Contact details</a> for numbers.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I get a medical excuse letter for missed classes?</h3>
+        <p>Yes, ask during your consultation  virtual or in person  and it will be issued through your student health portal.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How soon can I be seen?</h3>
+        <p>Virtual slots are often available same day. In-person visits are usually confirmed within 24 hours, faster for urgent requests.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I choose a specific doctor?</h3>
+        <p>You can mention a preference in the reason field we'll try to match you, but it isn't guaranteed depending on availability. See who's on staff under <a href="doctors.html">Doctors</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I need to cancel or reschedule?</h3>
+        <p>Use the link in your confirmation email, or contact the clinic directly  details are on this page.</p>
+      </div>
+      <div class="notice">
+        <p><strong>This isn't for emergencies.</strong> If you need urgent care, call the 24/7 nurse triage line instead of booking online. See <a href="#contact-details">contact details</a>.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4>Campus Clinic</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="doctors.html">Our doctors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Care</h4>
+      <ul>
+        <li><a href="telemedicine.html">Telemedicine</a></li>
+        <li><a href="appointments.html">Book an appointment</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="health-resources.html">Lab tests</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy;  2026 BETTERcare Medical Center. All rights reserved.
+  </div>
+</footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>

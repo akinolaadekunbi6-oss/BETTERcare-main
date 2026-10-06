@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/Screenshot 2026-09-25 092349.png" type="image/x-icon">
+
+<title>Telemedicine — Campus Clinic</title>
+<meta name="description" content="How virtual consultations work at the campus clinic, what you need, and when to use them.">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">+</span>
+      <span class="brand-text">
+        <strong>Campus Clinic</strong>
+        <span>Telemedicine Portal</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Patient login</a></li>
+        <li><a href="appointments.html">Book Appointment</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="health-resources.html">Lab Tests</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero telemedicine-hero">
+    <div class="container">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <h1>See a doctor by video or phone</h1>
+          <p class="lede">Virtual consultations cover most non-emergency concerns — colds, skin issues, prescription renewals, follow-ups and mental health check-ins — without a trip to the clinic.</p>
+          <div class="hero-actions">
+            <a href="appointments.html" class="btn btn-primary">Book a virtual consult</a>
+            <a href="#async-consultation" class="btn btn-ghost">Send a case for review</a>
+            <button type="button" class="btn btn-ghost" id="start-video">Open accessible call demo</button>
+          </div>
+        </div>
+        <div class="hero-image-frame">
+          <img src="images/image 3.png" alt="Telemedicine consultation in progress">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Good for a virtual consult</h2>
+          <p>Colds, flu-like symptoms, allergies, skin concerns, minor injuries, prescription renewals, mental health check-ins, and follow-ups on an existing treatment plan.</p>
+        </div>
+        <div>
+          <h2>Needs an in-person visit instead</h2>
+          <p>Anything requiring a physical exam, lab work, vaccination, suturing, or anything you'd describe as urgent or severe. For those, book an in-clinic appointment or use the emergency line.</p>
+          <a href="contact.html" class="btn btn-outline">Emergency &amp; contact info</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section async-section" id="async-consultation">
+    <div class="container two-col">
+      <div>
+        <span class="eyebrow">Store-and-forward care</span>
+        <h2>Send a non-urgent case for review</h2>
+        <p>Share a description and optional photos or a short video. A clinician will review your submission and respond in your patient portal within 1 business day.</p>
+        <div class="notice">
+          <p><strong>Not for emergencies:</strong> Do not use this form for severe pain, heavy bleeding, breathing trouble, chest pain, rapidly worsening symptoms, or anything that cannot wait. Use <a href="contact.html">emergency contacts</a> instead.</p>
+        </div>
+      </div>
+      <form class="panel" id="async-consultation-form">
+        <div class="form-row">
+          <label for="async-category">What would you like reviewed?</label>
+          <select id="async-category" name="category" required>
+            <option value="">Choose a care area</option>
+            <option>Skin or rash</option>
+            <option>Wound care</option>
+            <option>Follow-up question</option>
+            <option>Other non-urgent concern</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="async-description">Describe what is happening</label>
+          <textarea id="async-description" name="description" minlength="20" placeholder="When did it start? What has changed? What have you tried?" required></textarea>
+        </div>
+        <div class="form-row">
+          <label for="async-media">Add photos or a short video (optional)</label>
+          <input type="file" id="async-media" name="media" accept="image/*,video/*" multiple>
+          <small class="field-help">Use clear, well-lit images. Maximum 3 files, 20 MB each.</small>
+        </div>
+        <label class="checkbox-row"><input type="checkbox" id="async-non-urgent" required> I confirm this is non-urgent and can wait up to 1 business day for a response.</label>
+        <button type="submit" class="btn btn-primary">Submit for clinician review</button>
+        <p class="form-footnote">Your submission is stored securely in the production portal. This demo stores the request details in this browser only.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="notice">
+        <p><strong>Privacy:</strong> Virtual consultations use an encrypted video service and are documented in your confidential student health record, in line with the same privacy rules as an in-person visit.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4>Campus Clinic</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="doctors.html">Our doctors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Care</h4>
+      <ul>
+        <li><a href="telemedicine.html">Telemedicine</a></li>
+        <li><a href="appointments.html">Book an appointment</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="health-resources.html">Lab tests</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Campus Clinic. This is a sample site built for demonstration purposes — not a substitute for real medical services.
+  </div>
+</footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/Screenshot 2026-09-25 092349.png" type="image/x-icon">
+
+<title>Book an Appointment — Campus Clinic</title>
+<meta name="description" content="Book a virtual or in-person appointment at the campus clinic.">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="appointment-page">
+  
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">+</span>
+      <span class="brand-text">
+        <strong>Campus Clinic</strong>
+        <span>Telemedicine Portal</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Patient login</a></li>
+        <li><a href="appointments.html" aria-current="page">Book Appointment</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="health-resources.html">Lab Tests</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero appointment-hero">
+    <div class="container">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <h1>Book an appointment</h1>
+          <p class="lede">Choose a virtual or in-person visit. You'll get a confirmation by email with the details and, for virtual visits, your video link closer to the time.</p>
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary" id="appointment-triage">Check my symptoms</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>How it works</h2>
+      </div>
+      <ol class="timeline">
+        <li>
+          <span class="step">01</span>
+          <div>
+            <h4>Book a slot</h4>
+            <p>Choose "Virtual" when booking and pick a time that fits your schedule — most slots are available same-day.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step">02</span>
+          <div>
+            <h4>Receive a link</h4>
+            <p>You'll get a secure video link by email and text 15 minutes before your appointment. No app download needed.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step">03</span>
+          <div>
+            <h4>Join from anywhere on campus</h4>
+            <p>Join from your room, the library or a study space — you just need a quiet spot and a stable connection.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step">04</span>
+          <div>
+            <h4>Get your plan</h4>
+            <p>The doctor gives you a treatment plan, e-prescription (sent to the campus pharmacy) or a referral, all summarised in your student health portal.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step">05</span>
+          <div>
+            <h4>Follow up if needed</h4>
+            <p>If the doctor recommends an in-person exam or test, you'll be offered the next available in-clinic slot before you leave the call.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section appointment-details">
+    <div class="container">
+      <div class="two-col">
+        <form class="panel">
+          <input type="hidden" id="preferred-doctor" name="doctor">
+          <p class="field-help" id="doctor-booking-note" hidden>Appointment request for <strong></strong>. The clinic will confirm the appointment details.</p>
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="student-id">Matriculation number</label>
+              <input type="text" id="student-id" name="student-id" placeholder="e.g. SU/2023/00123" required>
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="For appointment reminders">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="visit-type">Visit type</label>
+              <select id="visit-type" name="visit-type">
+                <option>Virtual consultation</option>
+                <option>In-person visit</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="department">Department</label>
+              <select id="department" name="department">
+                <option>General practice</option>
+                <option>Mental health &amp; counselling</option>
+                <option>Sexual &amp; reproductive health</option>
+                <option>Physiotherapy</option>
+                <option>Vaccination &amp; immunisation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="payment-grid">
+            <div class="form-row">
+              <label for="insurance">Payment or insurance</label>
+              <select id="insurance" name="insurance">
+                <option>Student health plan</option>
+                <option>Private insurance</option>
+                <option>Pay at clinic</option>
+                <option>Need fee guidance</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="insurance-number">Policy or member number</label>
+              <input type="text" id="insurance-number" name="insurance-number" placeholder="Optional">
+            </div>
+          </div>
+          <div class="cost-preview" id="cost-preview" aria-live="polite">
+            <strong>Estimated cost</strong>
+            <span id="cost-preview-text">Select a payment option to see an estimate.</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="date">Preferred date</label>
+              <input type="date" id="date" name="date">
+            </div>
+            <div class="form-row">
+              <label for="time">Preferred time</label>
+              <input type="time" id="time" name="time">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="reason">Reason for visit</label>
+            <textarea id="reason" name="reason" placeholder="Briefly describe what you'd like to be seen for"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Request appointment</button>
+        </form>
+
+        <div>
+          <h2>Questions before booking?</h2>
+          <p>Visit our frequently asked questions for guidance on appointments, care and clinic services.</p>
+          <a class="btn btn-outline" href="contact.html#frequently-asked-questions">View frequently asked questions</a>
+        </div>
+      </div>
+
+      <div class="feature-strip" aria-label="Care options">
+        <article class="feature-card">
+          <h3>Live video consultation</h3>
+          <p>Join an encrypted browser-based consultation from your dashboard when your appointment starts.</p>
+          <button type="button" class="btn btn-outline" id="start-video">Open demo consultation</button>
+        </article>
+        <article class="feature-card">
+          <h3>Payment and insurance</h3>
+          <p>Choose your student plan, private insurer, or pay-at-clinic option when you request care.</p>
+          <button type="button" class="btn btn-outline" id="payment-help">View payment guidance</button>
+        </article>
+        <article class="feature-card">
+          <h3>Care feedback</h3>
+          <p>After a visit, rate your experience and share a short note to help the clinic improve.</p>
+          <button type="button" class="btn btn-outline" id="leave-feedback">Leave feedback</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4>Campus Clinic</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="doctors.html">Our doctors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Care</h4>
+      <ul>
+        <li><a href="telemedicine.html">Telemedicine</a></li>
+        <li><a href="appointments.html">Book an appointment</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="health-resources.html">Lab tests</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy;  2026 BETTERcare Medical Center. All rights reserved.
+</footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
