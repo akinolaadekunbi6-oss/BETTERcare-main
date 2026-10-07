@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/Screenshot 2026-09-25 092349.png" type="image/x-icon">
+
+<title>Login - Campus Clinic</title>
+<meta name="description" content="Sign in to the Campus Clinic patient portal demo.">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">+</span><span class="brand-text"><strong>Campus Clinic</strong><span>Telemedicine Portal</span></span></a>
+    <nav aria-label="Main navigation"><ul class="nav-list">
+      <li><a href="index.html">Home</a></li><li><a href="login.html" aria-current="page">Patient login</a></li>
+<li><a href="appointments.html">Book Appointment</a></li><li><a href="doctors.html">Doctors</a></li><li><a href="services.html">Services</a></li><li><a href="health-resources.html">Lab Tests</a></li><li><a href="contact.html">Contact</a></li>    </ul></nav>
+  </div>
+</header>
+
+<main>
+  <section class="section auth-section">
+    <div class="container auth-layout">
+      <div>
+        <span class="eyebrow">Patient portal</span>
+        <h1>Welcome back</h1>
+        <p>Sign in to view appointments, reminders, messages, prescriptions, and your clinic documents in one place.</p>
+        <div class="notice"><p><strong>Demo mode:</strong> This static site stores demo login details only in this browser. Do not enter real medical information.</p></div>
+      </div>
+      <form class="panel auth-form" id="login-form">
+        <div class="form-row"><label for="login-email">Student email</label><input type="email" id="login-email" placeholder="you@example.edu" required></div>
+        <div class="form-row"><label for="login-password">Password</label><input type="password" id="login-password" placeholder="Enter your password" minlength="4" required></div>
+        <label class="checkbox-row"><input type="checkbox" id="remember-login" checked> Remember me on this device</label>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="button" class="text-button" id="forgot-password">Forgot password?</button>
+        <p class="auth-switch">New to the portal? <button type="button" class="text-button" id="create-account">Create a demo account</button></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div><h4>Campus Clinic</h4><ul><li><a href="services.html">Services</a></li><li><a href="doctors.html">Our doctors</a></li></ul></div><div><h4>Care</h4><ul><li><a href="telemedicine.html">Telemedicine</a></li><li><a href="appointments.html">Book an appointment</a></li></ul></div><div><h4>Support</h4><ul><li><a href="health-resources.html">Lab tests</a></li><li><a href="contact.html">Contact &amp; emergency</a></li></ul></div></div><div class="footer-bottom">&copy;  2026 BETTERcare Medical Center. All rights reserved.</div></footer>
+<script src="scripts/app.js"></script>
+</body>
+</html>

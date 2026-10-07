@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/Screenshot 2026-09-25 092349.png" type="image/x-icon">
+
+<title>Patient Dashboard - Campus Clinic</title>
+<meta name="description" content="Manage your Campus Clinic appointments and patient portal information.">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="emergency-strip"><div class="container"><span><strong>Medical emergency on campus?</strong> Call campus security on 0800-CLINIC or go straight to the clinic's ground-floor emergency bay.</span><a href="contact.html">Emergency contacts &amp; hours</a></div></div>
+<header class="site-header"><div class="container"><a href="index.html" class="brand"><span class="brand-mark">+</span><span class="brand-text"><strong>Campus Clinic</strong><span>Telemedicine Portal</span></span></a><nav aria-label="Main navigation"><ul class="nav-list"><li><a href="index.html">Home</a></li><li><a href="login.html">Patient login</a></li>
+<li><a href="appointments.html">Book Appointment</a></li><li><a href="doctors.html">Doctors</a></li><li><a href="services.html">Services</a></li><li><a href="health-resources.html">Lab Tests</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></header><main>
+<section class="section dashboard-section"><div class="container">
+<div class="dashboard-heading"><div><span class="eyebrow">Patient portal</span><h1 id="dashboard-greeting">Your dashboard</h1><p>Keep track of your care in one place.</p></div><button type="button" class="btn btn-outline" id="logout-button">Sign out</button></div>
+<div class="dashboard-grid">
+<article class="dashboard-card dashboard-card-wide"><div class="card-heading"><h2>Upcoming appointments</h2><a href="appointments.html">Book another</a></div><div id="dashboard-appointments" class="dashboard-list"><p class="empty-state">No appointments scheduled yet.</p></div></article>
+<article class="dashboard-card dashboard-card-wide"><div class="card-heading"><h2>Notification center</h2><button type="button" class="text-button" id="mark-notifications">Mark all read</button></div><div class="notification-list"><div class="notification-item"><span>Appointment reminders are enabled for email and text.</span><small>Now</small></div><div class="notification-item"><span>Flu vaccinations are available weekdays from 9am to 3pm.</span><small>Today</small></div></div></article>
+<article class="dashboard-card dashboard-card-wide"><div class="card-heading"><h2>Cases sent for review</h2><a href="telemedicine.html#async-consultation">Send another</a></div><div id="dashboard-consultations" class="dashboard-list"><p class="empty-state">No asynchronous consultations yet.</p></div></article>
+<article class="dashboard-card dashboard-card-wide"><div class="card-heading"><h2>Prescriptions &amp; pharmacy</h2><a href="telemedicine.html">Open consultation</a></div><div id="dashboard-prescriptions" class="dashboard-list"><p class="empty-state">No prescriptions issued yet.</p></div></article>
+<article class="dashboard-card"><h2>Connected health</h2><div id="dashboard-vitals" class="vitals-summary"><p class="empty-state">No wearable connected.</p></div><button type="button" class="btn btn-outline" id="manage-devices">Manage devices</button></article>
+<article class="dashboard-card"><h2>Caregiver access</h2><p id="dashboard-caregiver-status" class="profile-summary">No caregiver access granted.</p><a class="btn btn-outline" href="telemedicine.html">Manage in consultation</a></article>
+<article class="dashboard-card"><h2>Quick actions</h2><div class="quick-actions"><a class="btn btn-primary" href="telemedicine.html">Start virtual care</a><a class="btn btn-outline" href="health-resources.html">Browse lab tests</a><button class="btn btn-outline" type="button" id="message-care">Message care team</button></div></article>
+<article class="dashboard-card"><h2>Payment &amp; insurance</h2><dl class="profile-summary"><dt>Current option</dt><dd id="dashboard-insurance">Student health plan</dd><dt>Billing</dt><dd>No balance due in demo mode.</dd></dl><button class="btn btn-outline" type="button" id="payment-settings">Update payment details</button></article>
+<article class="dashboard-card"><h2>Health documents</h2><ul class="dashboard-links"><li><a href="#" data-demo-action="records">Visit summaries <span>Coming soon</span></a></li><li><a href="#" data-demo-action="prescriptions">Prescriptions <span>Coming soon</span></a></li><li><a href="#" data-demo-action="lab-results">Lab results <span>Coming soon</span></a></li></ul></article>
+<article class="dashboard-card"><h2>Profile &amp; preferences</h2><dl class="profile-summary"><dt>Email</dt><dd id="profile-email">Not signed in</dd><dt>Reminders</dt><dd>Email and text enabled</dd><dt>Privacy</dt><dd>Your demo data stays in this browser.</dd></dl></article>
+<article class="dashboard-card dashboard-card-wide"><div class="card-heading"><h2>Rate your care</h2><span>Recent visit</span></div><p class="feedback-copy">Your feedback helps the care team improve access and support.</p><div class="rating-choice" id="dashboard-rating" aria-label="Rate your care from one to five stars"><button type="button" data-rating="1" aria-label="1 star">&#9733;</button><button type="button" data-rating="2" aria-label="2 stars">&#9733;</button><button type="button" data-rating="3" aria-label="3 stars">&#9733;</button><button type="button" data-rating="4" aria-label="4 stars">&#9733;</button><button type="button" data-rating="5" aria-label="5 stars">&#9733;</button></div><textarea id="feedback-note" class="feedback-note" placeholder="Optional comment"></textarea><button type="button" class="btn btn-primary" id="submit-feedback">Send feedback</button></article>
+</div>
+<div class="notice"><p><strong>Need urgent help?</strong> The dashboard is not monitored for emergencies. Call the 24/7 nurse triage line or visit <a href="contact.html">Emergency contacts</a>.</p></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container"><div><h4>Campus Clinic</h4><ul><li><a href="services.html">Services</a></li><li><a href="doctors.html">Our doctors</a></li></ul></div><div><h4>Care</h4><ul><li><a href="telemedicine.html">Telemedicine</a></li><li><a href="appointments.html">Book an appointment</a></li></ul></div><div><h4>Support</h4><ul><li><a href="health-resources.html">Lab tests</a></li><li><a href="contact.html">Contact &amp; emergency</a></li></ul></div></div><div class="footer-bottom">&copy; 2026 Campus Clinic. This is a sample patient portal for demonstration purposes.</div></footer>
+<script src="scripts/app.js"></script>
+</body>
+</html>
